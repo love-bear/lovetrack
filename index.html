@@ -49,6 +49,7 @@
                   </div>
                   <ul>
                      <li><a id="Aa" class="scroll" href="#home">爱的首页</a></li>
+                     <li><a href="https://fly.lovebear.site/">爱的告白</a></li>
                      <li><a id="Bb" class="scroll" href="#story">爱的故事</a></li>
                      <li><a id="Cc" class="scroll" href="#album">爱的相册</a></li>
                   </ul>
@@ -290,11 +291,30 @@
       };
    </script>
 
-   <audio id="main_audio" autoplay="autoplay" preload="auto" loop="">
+<!--    <audio id="main_audio" autoplay="autoplay" preload="auto" loop="">
       <source
          src="http://m128.xiami.net/869/2110248869/2103472457/1801400569_1516527396061.mp3?auth_key=1519095600-0-0-c65ae8fba0efb9eae88785e8b6322bd9"
          type="audio/mpeg">
-   </audio>
+   </audio> -->
+   <audio src="audio/wait4u.mp3" id="audios" autoplay preload loop="loop"></audio>
+	    
+	<script>
+	var play = true;
+	document.addEventListener("WeixinJSBridgeReady", function () {       
+		if(play){
+		    var music = document.getElementById('audios');
+		    music.play();
+		    play = false;
+		}       
+	    }, false);
+	$('body').on('touchstart',function(e) {
+		if(play){
+		    var music = document.getElementById('audios');
+		    music.play();
+		    play = false;
+		}
+	    });
+	</script> 
 
    <script type="text/javascript" src="js/count.js"></script>
 
