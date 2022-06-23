@@ -6,10 +6,22 @@
 
 <body>
    <audio src="audio/wait4u.mp3" id="audios" autoplay preload loop="loop"></audio> 
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            function audioAutoPlay() {
+                var audio = document.getElementById('audios');
+                audio.play();
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    audio.play();
+                }, false);
+            }
+            audioAutoPlay();
+        });
+    </script>
 <!--    <audio id="audios" controls autoplay muted>
    <source src="audio/wait4u.mp3" type="audio/mp3">
    </audio> -->
-   <script>
+<!--    <script>
 	var play = true;
 	document.addEventListener("WeixinJSBridgeReady", function () {       
 		if(play){
@@ -25,7 +37,7 @@
 		    play = false;
 		}
 	    });
-   </script> 
+   </script>  -->
    <meta name="description" content="我们的相遇是意外的，但这是一个美丽幸福的意外，让我遇到了这么好的你">
    <title>Fly loves Bear</title>
    <link rel="icon" type="image/x-icon" href="https://i.loli.net/2021/06/03/lFg2V4WUcmkB98G.png">
