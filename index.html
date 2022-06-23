@@ -5,7 +5,10 @@
 </head>
 
 <body>
-   <audio src="audio/wait4u.mp3" id="audios" autoplay preload loop="loop"></audio>    
+<!--    <audio src="audio/wait4u.mp3" id="audios" autoplay preload loop="loop"></audio>  -->
+   <audio id="audios" controls autoplay muted>
+   <source src="audio/wait4u.mp3" type="audio/mp3">
+   </audio>
    <script>
 	var play = true;
 	document.addEventListener("WeixinJSBridgeReady", function () {       
