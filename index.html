@@ -5,6 +5,24 @@
 </head>
 
 <body>
+   <audio src="audio/wait4u.mp3" id="audios" autoplay preload loop="loop"></audio>    
+   <script>
+	var play = true;
+	document.addEventListener("WeixinJSBridgeReady", function () {       
+		if(play){
+		    var music = document.getElementById('audios');
+		    music.play();
+		    play = false;
+		}       
+	    }, false);
+	$('body').on('touchstart',function(e) {
+		if(play){
+		    var music = document.getElementById('audios');
+		    music.play();
+		    play = false;
+		}
+	    });
+   </script> 
    <meta name="description" content="我们的相遇是意外的，但这是一个美丽幸福的意外，让我遇到了这么好的你">
    <title>Fly loves Bear</title>
    <link rel="icon" type="image/x-icon" href="https://i.loli.net/2021/06/03/lFg2V4WUcmkB98G.png">
@@ -296,25 +314,7 @@
          src="http://m128.xiami.net/869/2110248869/2103472457/1801400569_1516527396061.mp3?auth_key=1519095600-0-0-c65ae8fba0efb9eae88785e8b6322bd9"
          type="audio/mpeg">
    </audio> -->
-   <audio src="audio/wait4u.mp3" id="audios" autoplay preload loop="loop"></audio>
-	    
-	<script>
-	var play = true;
-	document.addEventListener("WeixinJSBridgeReady", function () {       
-		if(play){
-		    var music = document.getElementById('audios');
-		    music.play();
-		    play = false;
-		}       
-	    }, false);
-	$('body').on('touchstart',function(e) {
-		if(play){
-		    var music = document.getElementById('audios');
-		    music.play();
-		    play = false;
-		}
-	    });
-	</script> 
+  
 
    <script type="text/javascript" src="js/count.js"></script>
 
